@@ -1,0 +1,11 @@
+{
+	"nome" : "Joao",
+	"telefone" : "22999604234",
+	"cidade" : "Itaperuna",
+	"estado" : "RJ",
+	"idade" : 33,
+	"scoreDescricao" : "Insuficiente",
+	"estados" : ["RJ", "SP"]
+}
+
+
