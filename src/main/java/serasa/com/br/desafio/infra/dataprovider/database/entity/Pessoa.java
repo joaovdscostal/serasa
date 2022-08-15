@@ -26,7 +26,7 @@ public class Pessoa {
     @Column(name = "ID_PESSOA", nullable = false)
     private Long id;
 
-	@Column(name = "DATAINCLUSAO")
+	@Column(name = "DATAINCLUSAO", columnDefinition = "TIMESTAMP")
 	private LocalDateTime dataInclusao;
 
     @Column(name = "NOME")

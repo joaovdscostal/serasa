@@ -1,5 +1,6 @@
 package serasa.com.br.desafio.infra.dataprovider.gateway;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,12 @@ public class PessoaGatewayImpl implements PessoaGateway {
 	@Override
 	public void adicionaPessoa(PessoaDTO pessoaDTO) {
 		Pessoa pessoa = pessoaModelMap.DTOToEntity(pessoaDTO);
+		inicializarParametrosDaPessoa(pessoa);
 		pessoaRepository.save(pessoa);
+	}
+
+	private void inicializarParametrosDaPessoa(Pessoa pessoa) {
+		pessoa.setDataInclusao(LocalDateTime.now());
 	}
 
 	@Override

@@ -39,6 +39,10 @@ public class BuscaTodasPessoasInteractor implements BuscaTodasPessoasBoundary{
 			}
 		});
 
+		if(retorno.isEmpty()) {
+			throw new EntityNotFoundException("Nao existem pessoas cadastradas com parametros validados!");
+		}
+
 		return retorno;
 	}
 }
