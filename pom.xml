@@ -12,7 +12,7 @@
 
 	<groupId>serasa.com.br</groupId>
 	<artifactId>desafio</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>desafio</name>
 	<description>Desafio Serasa Experian</description>
 

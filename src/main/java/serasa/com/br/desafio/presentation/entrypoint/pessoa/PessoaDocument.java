@@ -18,15 +18,10 @@ import serasa.com.br.desafio.presentation.model.response.PessoaTelefoneResponseM
 
 @Tag(name = "Pessoa", description = "Serviço responsável pela manutenção de pessoas.")
 @ApiResponses(
-        value = {
-        		@ApiResponse(responseCode = "204", description = "Registros nao encontrados.", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class))),
+		value = {
                 @ApiResponse(responseCode = "400", description = "Parâmetros incorretos (os dados de entradas estão incorretos ou ausentes).", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class))),
-                @ApiResponse(responseCode = "401", description = "Não autorizado. Verifique se os parâmetros de acesso estão válidos. Se o problema persistir, entre em contato o Owner da Api.", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class))),
-                @ApiResponse(responseCode = "403", description = "Acesso proibido. Verifique se os parâmetros de acesso estão válidos. Se o problema persistir, entre em contato o Owner da Api.", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class))),
-                @ApiResponse(responseCode = "404", description = "Recurso Inexistente (não encontrado)", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class))),
-                @ApiResponse(responseCode = "405", description = "Método não encontrado.", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class))),
                 @ApiResponse(responseCode = "500", description = "Erro Inesperado. Se o problema persistir, entre em contato o Owner da Api.", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class))),
-                @ApiResponse(responseCode = "503", description = "Serviço Indisponível. Se o problema persistir, entre em contato o Owner da Api.", content = @Content(schema = @Schema(implementation = ApiErrorResponse.class)))
+                @ApiResponse(responseCode = "204", description = "Informacoes nao encontradas.")
         }
 )
 public interface PessoaDocument {
